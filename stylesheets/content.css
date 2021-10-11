@@ -61,7 +61,7 @@ img {  width: 700px;
   padding: 0;}
 
 }
-img + h2 { margin-top: 79px;
+img + h2 { margin-top: 50px;
 }
 img + p,
 img + blockquote,
@@ -80,6 +80,7 @@ section{
 }
 section div{
   width: 45%
+  padding-bottom: 40px;
 
 }
 .sectionmain{
@@ -94,7 +95,7 @@ section h1{
 
 }
 section p{
-    margin-top: 8px;
+     margin-top: 14px;
      font-family: 'PT Sans Caption',
      sans-serif;
      font-size: 22px;
@@ -106,6 +107,9 @@ section img{
 }
 
 .button1{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   height: 60px;
   width: 300px;
   border-radius: 5px;
@@ -113,16 +117,22 @@ section img{
   border: 1px solid #C4C4C4;
   font-family: 'PT Sans Caption',
   sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   color: rgba(0,0,0,.4);
+  margin: 4px 2px;
+  transition: 0.2s;
+  padding: 5px;
 }
 
 .button2{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   height: 60px;
   width: 300px;
   border-radius: 5px;
-  background: #000000;
+  background-color: #000000;
   font-family: 'PT Sans Caption',
   sans-serif;
   font-size: 18px;
@@ -130,25 +140,23 @@ section img{
   color: #FFFFFF;
 }
 
+/*
+.divbutton{
+  padding-left: 200px;
+  margin-bottom: 120px;
+}
+*/
 
 .hrabout{
   wight: 100%;
 }
 
-
+.divclass4{
+  width: 60%
+}
 
 .list{
   list-style: none;
+  padding: 0; /* Убираем поля */
+  margin-left: 20px; /* Отступ слева */
 }
-
-ol {
-   /* убираем стандартную нумерацию */
-   list-style: none;
-   /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
-   counter-reset: li;
-}
-li:before {
-   /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
-   counter-increment: li;
-   /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
-   content: counters(li, ".") ". ";
